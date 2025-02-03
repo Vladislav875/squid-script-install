@@ -23,9 +23,9 @@ if [ -f /sbin/iptables ]; then
     sudo /sbin/iptables -I INPUT -p tcp --dport 3128 -j ACCEPT
 fi
 
-# Создание пользователя с случайным паролем
+# Создание пользователя с случайным именем и паролем
 echo "Создание пользователя Squid..."
-USERNAME="akela"
+USERNAME="user_$(openssl rand -hex 4)"
 PASSWORD=$(openssl rand -base64 12)
 echo -n "$USERNAME:$PASSWORD" | sudo tee /etc/squid/passwd
 sudo chown proxy:proxy /etc/squid/passwd
