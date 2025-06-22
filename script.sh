@@ -45,4 +45,4 @@ IP=$(curl -s ifconfig.me)
 PORT=3128
 
 # Вывод строки подключения
-echo "Прокси доступен по адресу: $IP:$PORT:$USERNAME:$PASSWORD"
+echo "Прокси доступен по адресу: $IP:$PORT:$USERNAME:$PASSWORD" >> squid_proxy_result.txt
