@@ -46,3 +46,4 @@ PORT=3128
 
 # Вывод строки подключения
 echo "Прокси доступен по адресу: $IP:$PORT:$USERNAME:$PASSWORD" >> squid_proxy_result.txt
+cat squid_proxy_result.txt
