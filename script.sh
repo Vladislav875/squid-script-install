@@ -41,7 +41,7 @@ sudo service squid restart
 
 # Получение IP-адреса
 echo "Получение IP-адреса..."
-IP=$(curl -s ifconfig.me)
+IP=$(hostname -I | cut -f1 -d' ')
 PORT=3128
 
 # Вывод строки подключения
